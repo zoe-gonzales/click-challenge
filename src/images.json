@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "file": "one",
+        "name": "Rubber Soul"
+    },
+    {
+        "id": 2,
+        "file": "two",
+        "name": "Please Please Me"
+    },
+    {
+        "id": 3,
+        "file": "three",
+        "name": "Rubber Soul"
+    },
+    {
+        "id": 4,
+        "file": "four",
+        "name": "Help!"
+    },
+    {
+        "id": 5,
+        "file": "five",
+        "name": "St. Peppers"
+    },
+    {
+        "id": 6,
+        "file": "six",
+        "name": "Let It Be"
+    },
+    {
+        "id": 7,
+        "file": "seven",
+        "name": "One"
+    },
+    {
+        "id": 8,
+        "file": "eight",
+        "name": "Yellow Submarine"
+    },
+    {
+        "id": 9,
+        "file": "nine",
+        "name": "Abby Road"
+    },
+    {
+        "id": 10,
+        "file": "ten",
+        "name": "A Hard Day's Night"
+    },
+    {
+        "id": 11,
+        "file": "eleven",
+        "name": "Live at the BBC"
+    },
+    {
+        "id": 12,
+        "file": "twelve",
+        "name": "With the Beatles"
+    }
+]

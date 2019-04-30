@@ -8,7 +8,7 @@ import images from './images.json';
 function App() {
   return (
     <div>
-      <Header/>
+      <Header currentScore={100} topScore={100}/>
       <Container>
           {images.map(image => {
             return (

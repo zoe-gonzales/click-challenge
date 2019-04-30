@@ -2,27 +2,28 @@ import React from 'react';
 import { Jumbotron, Container, Row, Col } from 'reactstrap';
 import './style.css';
 
-const Header = () => {
+const Header = (props) => {
     return (
       <div>
         <Jumbotron className="heading" fluid>
           <Container fluid>
             <Row>
+              <Col sm="1"></Col>
               <Col sm="10">
-                <h1 className="display-4">Welcome to <span className="beatles">The Beatles</span> click challenge!</h1>
-                <p className="lead">Click any of the album covers to start the game. To gain points, be sure to only click each one once.</p>
+                <h3 className="display-4">Welcome to <span className="beatles">The Beatles</span> click challenge!</h3>
+                <p className="lead text-center">Click an album cover to start the game. To gain points, only click each one once.</p>
+              </Col>
+              <Col sm="1"></Col>
+            </Row>
+            <Row>
+              <Col sm="4"></Col>
+              <Col sm="2">
+                <h4 className="text-center">Your points: <span className="beatles">{props.currentScore}</span></h4>
               </Col>
               <Col sm="2">
-                <Row>
-                  <h4>Your points: <span className="beatles"></span></h4>
-                </Row>
-                <Row>
-                  <h4>Top score: <span className="beatles"></span></h4>
-                </Row>
-                <Row>
-                  <p className="lead"></p>
-                </Row>
+                <h4 className="text-center">Top score: <span className="beatles">{props.topScore}</span></h4>
               </Col>
+              <Col sm="4"></Col>
             </Row>
           </Container>
         </Jumbotron>

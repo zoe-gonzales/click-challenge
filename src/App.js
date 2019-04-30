@@ -1,24 +1,13 @@
 import React from 'react';
-import { Container } from 'reactstrap';
-import Image from './components/Image';
 import Header from './components/Header';
-
-import images from './images.json';
+import Wrapper from './components/ImgWrapper';
+import images from './images.json'
 
 function App() {
   return (
     <div>
       <Header currentScore={100} topScore={100}/>
-      <Container>
-          {images.map(image => {
-            return (
-              <Image
-                name={image.name}
-                source={`../images/${image.file}.jpg`}
-              />
-            );
-          })}
-      </Container>
+      <Wrapper images={images}/>
     </div>
   );
 }

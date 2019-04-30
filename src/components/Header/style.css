@@ -6,3 +6,8 @@
 .beatles {
     font-family: 'Modak', cursive;
 }
+
+.beatles-score {
+    font-family: 'Modak', cursive;
+    font-size: 2.5rem;
+}

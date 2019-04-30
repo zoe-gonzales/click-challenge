@@ -18,10 +18,10 @@ const Header = (props) => {
             <Row>
               <Col sm="4"></Col>
               <Col sm="2">
-                <h4 className="text-center">Your points: <span className="beatles">{props.currentScore}</span></h4>
+                <h4 className="text-center">Your points: <span className="beatles-score">{props.currentScore}</span></h4>
               </Col>
               <Col sm="2">
-                <h4 className="text-center">Top score: <span className="beatles">{props.topScore}</span></h4>
+                <h4 className="text-center">Top score: <span className="beatles-score">{props.topScore}</span></h4>
               </Col>
               <Col sm="4"></Col>
             </Row>

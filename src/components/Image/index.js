@@ -5,6 +5,5 @@ export default function Image(props){
     return <img 
         src={props.source} 
         alt={props.name} 
-        onClick={props.handler}
-        data-clicked={props.clicked}/>;
+        onClick={props.handler}/>;
 }

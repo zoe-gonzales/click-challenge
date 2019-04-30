@@ -6,8 +6,9 @@ import images from './images.json'
 function App() {
   return (
     <div>
-      <Header currentScore={100} topScore={100}/>
-      <Wrapper images={images}/>
+      <Wrapper images={images}>
+        <Header topScore={100}/>
+      </Wrapper>
     </div>
   );
 }

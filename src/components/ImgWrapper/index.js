@@ -15,8 +15,26 @@ class Wrapper extends Component {
     }
 
     handleClick = id => {
-        const clicked = this.state.images.filter(image => image.id === id);
-        const newArray = shuffle(this.state.images, { 'copy': true });
+        const images = this.state.images.filter(image => {
+            if (image.id === id) {
+                if (image.clicked) {
+                    this.setState({ score: 0 });
+                    console.log("error, image clicked more than 1x");
+                    return image;
+                } else {
+                    let score = this.state.score;
+                    score++;
+                    this.setState({ score: score });
+                    return image.clicked = true;
+                }
+            } else {
+                return image;
+            }
+        });
+        console.log(images);
+
+        const newArray = shuffle(images, { 'copy': true });
+
         this.setState({
             images: newArray
         });
@@ -24,13 +42,13 @@ class Wrapper extends Component {
 
     render = () => {
         return (
-            <Container>
+            <Container score={this.state.score}>
+                {this.props.children}
                 {this.state.images.map(image => {
                     return <Image 
                         key={image.id} 
                         id={image.id}
                         name={image.name}
-                        clicked={false} 
                         handler={() => this.handleClick(image.id)}
                         source={`/images/${image.file}.jpg`}/>
                 })}

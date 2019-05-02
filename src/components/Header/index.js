@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Container, Row, Col } from 'reactstrap';
 import './style.css';
 
-const Header = (props) => {
+export default function Header(props) {
     return (
       <div>
         <Jumbotron className="heading" fluid>
@@ -10,7 +10,7 @@ const Header = (props) => {
             <Row>
               <Col sm="1"></Col>
               <Col sm="10">
-                <h3 className="display-4">Welcome to <span className="beatles">The Beatles</span> click challenge!</h3>
+                <h4 className="display-4 text-center"><span className="beatles">The Beatles</span> click challenge!</h4>
                 <p className="lead text-center">Click an album cover to start the game. To gain points, only click each one once.</p>
               </Col>
               <Col sm="1"></Col>
@@ -28,7 +28,5 @@ const Header = (props) => {
           </Container>
         </Jumbotron>
       </div>
-    );
-};
-  
-export default Header;
+    )
+}

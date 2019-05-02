@@ -11,40 +11,46 @@ class Wrapper extends Component {
             topScore: '',
             images: props.images
         }
-        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick = id => {
         const images = this.state.images.filter(image => {
-            if (image.id === id) {
-                if (image.clicked) {
-                    this.setState({ score: 0 });
-                    console.log("error, image clicked more than 1x");
-                    return image;
-                } else {
-                    let score = this.state.score;
-                    score++;
-                    this.setState({ score: score });
-                    return image.clicked = true;
-                }
-            } else {
+        // identifying the image that was clicked by id
+        if (image.id === id) {
+            let score = this.state.score;
+            let topScore = this.state.topScore;
+
+            if (image.clicked) {
+                this.setState({ score: 0 });
+                // resets top score if current score surpasses it
+                if (score > topScore) this.setState({ topScore: score });
+                // mapping over array to reset clicked value to false so that user can play multiple rounds
+                this.state.images.map(image => {
+                    if (image.clicked) {
+                        image.clicked = false;
+                        return image;
+                    } else return image;
+                });
                 return image;
+            } else {
+                score++;
+                if (score > topScore) this.setState({ topScore: score });
+                this.setState({ score: score });
+                return image.clicked = true;
             }
-        });
-        console.log(images);
+
+        } else return image;
+    });
 
         const newArray = shuffle(images, { 'copy': true });
-
-        this.setState({
-            images: newArray
-        });
+        this.setState({ images: newArray });
     }
 
     render = () => {
         return (
-            <div >
-            <Header currentScore={this.state.score} topScore={this.state.topScore}/>
-            <List list={this.state.images} handler={this.handleClick}/>
+            <div>
+                <Header currentScore={this.state.score} topScore={this.state.topScore}/>
+                <List list={this.state.images} handler={this.handleClick}/>
             </div>
         )
     }

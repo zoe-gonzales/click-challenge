@@ -11,7 +11,7 @@ export default function ImgList(props){
                         id={item.id}
                         name={item.name}
                         handler={() => props.handler(item.id)}
-                        source={`/images/${item.file}.jpg`}/>
+                        source={`./images/${item.file}.jpg`}/>
                 })}
         </Container>
     )

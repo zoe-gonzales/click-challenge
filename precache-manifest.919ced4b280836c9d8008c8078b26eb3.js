@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc74fe02df2367cdff3b2519e33f5f94",
+    "revision": "7c9e77f7cef39774eecb8e5de9107022",
     "url": "/click-challenge/index.html"
   },
   {
-    "revision": "de48b8b9638b047a51f3",
+    "revision": "85756a70a7c1fb56c778",
     "url": "/click-challenge/static/css/main.cda83451.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/click-challenge/static/js/2.59debe72.chunk.js"
   },
   {
-    "revision": "de48b8b9638b047a51f3",
-    "url": "/click-challenge/static/js/main.8cb8b6ca.chunk.js"
+    "revision": "85756a70a7c1fb56c778",
+    "url": "/click-challenge/static/js/main.95ca0cfb.chunk.js"
   },
   {
     "revision": "ed1ce67b0f2059523d24",

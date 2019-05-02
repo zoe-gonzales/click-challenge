@@ -4,13 +4,10 @@ import Header from '../Header';
 import shuffle from 'shuffle-array';
 
 class Wrapper extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            score: '',
-            topScore: '',
-            images: props.images
-        }
+    state = {
+        score: '',
+        topScore: '',
+        images: this.props.images
     }
 
     handleClick = id => {

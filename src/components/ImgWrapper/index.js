@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
-import Image from '../Image';
+import List from '../ImgList';
 import Header from '../Header';
 import shuffle from 'shuffle-array';
 
@@ -45,16 +44,7 @@ class Wrapper extends Component {
         return (
             <div >
             <Header currentScore={this.state.score} topScore={this.state.topScore}/>
-            <Container>
-                {this.state.images.map(image => {
-                    return <Image 
-                        key={image.id} 
-                        id={image.id}
-                        name={image.name}
-                        handler={() => this.handleClick(image.id)}
-                        source={`/images/${image.file}.jpg`}/>
-                })}
-            </Container>
+            <List list={this.state.images} handler={this.handleClick}/>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from '../ImgList';
 import Header from '../Header';
+import Footer from '../Footer';
 import shuffle from 'shuffle-array';
 
 class Wrapper extends Component {
@@ -46,8 +47,9 @@ class Wrapper extends Component {
     render = () => {
         return (
             <div>
-                <Header currentScore={this.state.score} topScore={this.state.topScore}/>
+                <Header/>
                 <List list={this.state.images} handler={this.handleClick}/>
+                <Footer currentScore={this.state.score} topScore={this.state.topScore}/>
             </div>
         )
     }

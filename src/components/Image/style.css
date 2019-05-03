@@ -3,10 +3,10 @@ body {
 }
 
 img {
-    width: 220px;
-    height: 220px;
-    border: .5rem solid #ffdb58;
-    margin: 20px;
+    width: 160px;
+    height: 160px;
+    border: .2rem solid #ffdb58;
+    margin: 12px;
 }
 
 img:hover {
